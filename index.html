@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BlackPanda Labs Sprint Command Center - 48-hour build sprint dashboard">
     <title>BlackPanda Labs Sprint Command Center</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -21,6 +22,7 @@
                 <li class="nav-item"><a href="#tracks" class="nav-link">Tracks</a></li>
                 <li class="nav-item"><a href="#progress" class="nav-link">Progress</a></li>
                 <li class="nav-item"><a href="#showcase" class="nav-link">Showcase</a></li>
+                <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
                 <li class="nav-item">
                     <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle dark mode">
@@ -39,10 +41,19 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">BlackPanda Labs Sprint Command Center</h1>
-            <p class="hero-subtitle">Your gateway to an epic 48-hour build sprint. Track challenges, monitor progress,
-                and showcase your innovations.</p>
-            <button class="btn btn-primary" id="getStartedBtn">Get Started</button>
+            <div class="hero-badge">🚀 Welcome to the Sprint</div>
+            <h1 class="hero-title">Sprint Command Center</h1>
+            <p class="hero-subtitle">Join 250+ developers in an epic 48-hour build sprint. Create innovative projects,
+                win challenges, and change the game.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="getStartedBtn">🚀 Get Started Now</button>
+                <button class="btn btn-outline" id="learnMoreBtn">📖 Learn More</button>
+            </div>
+        </div>
+        <div class="hero-decoration">
+            <div class="float-animation"></div>
+            <div class="float-animation delay-1"></div>
+            <div class="float-animation delay-2"></div>
         </div>
     </section>
 
@@ -71,150 +82,294 @@
 
     <!-- Build Tracks Section -->
     <section id="tracks" class="tracks-section">
-        <h2 class="section-title">Build Tracks</h2>
-        <p class="section-subtitle">Choose your challenge and showcase your skills</p>
-        <div class="tracks-container">
-            <div class="track-card">
-                <div class="track-icon">💻</div>
-                <h3>Web Development</h3>
-                <p>Build interactive web applications using HTML, CSS, and JavaScript. Create responsive and modern web
-                    experiences.</p>
-            </div>
-            <div class="track-card">
-                <div class="track-icon">🤖</div>
-                <h3>AI/ML</h3>
-                <p>Explore artificial intelligence and machine learning. Build models and solve real-world problems with
-                    AI.</p>
-            </div>
-            <div class="track-card">
-                <div class="track-icon">🔒</div>
-                <h3>Cybersecurity</h3>
-                <p>Protect the digital world. Learn security concepts and build secure applications and challenges.</p>
-            </div>
-            <div class="track-card">
-                <div class="track-icon">🎨</div>
-                <h3>UI/UX</h3>
-                <p>Design beautiful user interfaces and experiences. Focus on aesthetics and usability.</p>
-            </div>
-            <div class="track-card">
-                <div class="track-icon">📱</div>
-                <h3>App Development</h3>
-                <p>Create mobile and cross-platform applications. Build apps that work seamlessly on all devices.</p>
-            </div>
-            <div class="track-card">
-                <div class="track-icon">📚</div>
-                <h3>Documentation/Open Source</h3>
-                <p>Contribute to open source projects and create comprehensive documentation for the community.</p>
+        <div class="section-container">
+            <h2 class="section-title">Build Tracks</h2>
+            <p class="section-subtitle">Choose your track and showcase your expertise</p>
+            <div class="tracks-container">
+                <div class="track-card">
+                    <div class="track-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>Build stunning web applications using modern technologies. Create responsive, fast, and
+                        user-friendly experiences.</p>
+                    <span class="track-badge">Popular</span>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon">🤖</div>
+                    <h3>AI/ML</h3>
+                    <p>Explore machine learning and AI. Build intelligent systems that learn and adapt to real-world
+                        challenges.</p>
+                    <span class="track-badge">Advanced</span>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Protect systems and data. Build secure applications and penetration testing tools to keep the
+                        digital world safe.</p>
+                    <span class="track-badge">Security</span>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon">🎨</div>
+                    <h3>UI/UX Design</h3>
+                    <p>Design beautiful and intuitive interfaces. Focus on user experience and modern design principles.
+                    </p>
+                    <span class="track-badge">Creative</span>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon">📱</div>
+                    <h3>App Development</h3>
+                    <p>Create mobile and cross-platform applications. Build apps that work seamlessly across all
+                        devices.</p>
+                    <span class="track-badge">Mobile</span>
+                </div>
+                <div class="track-card">
+                    <div class="track-icon">📚</div>
+                    <h3>Open Source</h3>
+                    <p>Contribute to open source projects and create comprehensive documentation for the developer
+                        community.</p>
+                    <span class="track-badge">Community</span>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Progress Tracker Section -->
     <section id="progress" class="progress-section">
-        <h2 class="section-title">Progress Tracker</h2>
-        <p class="section-subtitle">Track your sprint milestones</p>
-        <div class="progress-container">
-            <div class="progress-card completed">
-                <div class="progress-icon">✅</div>
-                <h3>Repository Created</h3>
-                <p>Your project repository is ready and initialized.</p>
-            </div>
-            <div class="progress-card completed">
-                <div class="progress-icon">✅</div>
-                <h3>Website Started</h3>
-                <p>Foundation and basic structure are in place.</p>
-            </div>
-            <div class="progress-card in-progress">
-                <div class="progress-icon">🔄</div>
-                <h3>Project In Progress</h3>
-                <p>Development is actively underway. Keep pushing forward!</p>
-            </div>
-            <div class="progress-card pending">
-                <div class="progress-icon">⌛</div>
-                <h3>Final Submission</h3>
-                <p>Prepare your project for final submission and evaluation.</p>
+        <div class="section-container">
+            <h2 class="section-title">Your Sprint Progress</h2>
+            <p class="section-subtitle">Track your milestone achievements</p>
+            <div class="progress-container">
+                <div class="progress-card completed">
+                    <div class="progress-icon">✅</div>
+                    <h3>Repository Created</h3>
+                    <p>Your project repository is initialized and ready. All team members have access.</p>
+                    <div class="progress-meta">Completed</div>
+                </div>
+                <div class="progress-card completed">
+                    <div class="progress-icon">✅</div>
+                    <h3>Foundation Established</h3>
+                    <p>Project structure and core architecture are in place and documented.</p>
+                    <div class="progress-meta">Completed</div>
+                </div>
+                <div class="progress-card in-progress">
+                    <div class="progress-icon">⚡</div>
+                    <h3>Development in Progress</h3>
+                    <p>Features are being built. Keep the momentum going and stay focused!</p>
+                    <div class="progress-meta">Active</div>
+                </div>
+                <div class="progress-card pending">
+                    <div class="progress-icon">🎯</div>
+                    <h3>Final Polish & Testing</h3>
+                    <p>Testing and final improvements before submission.</p>
+                    <div class="progress-meta">Upcoming</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Statistics Section -->
     <section class="stats-section">
-        <h2 class="section-title">Sprint Statistics</h2>
-        <div class="stats-container">
-            <div class="stat-card">
-                <div class="stat-number">250+</div>
-                <div class="stat-label">Participants</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">6</div>
-                <div class="stat-label">Tracks</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">∞</div>
-                <div class="stat-label">Projects</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">48</div>
-                <div class="stat-label">Hours</div>
+        <div class="section-container">
+            <h2 class="section-title">Sprint By The Numbers</h2>
+            <div class="stats-container">
+                <div class="stat-card stat-1">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-number" data-target="250">0</div>
+                    <div class="stat-label">Participants</div>
+                    <div class="stat-description">Talented developers competing</div>
+                </div>
+                <div class="stat-card stat-2">
+                    <div class="stat-icon">🤝</div>
+                    <div class="stat-number" data-target="60">0</div>
+                    <div class="stat-label">Teams</div>
+                    <div class="stat-description">Collaborating teams worldwide</div>
+                </div>
+                <div class="stat-card stat-3">
+                    <div class="stat-icon">🎯</div>
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Tracks</div>
+                    <div class="stat-description">Different challenges to choose</div>
+                </div>
+                <div class="stat-card stat-4">
+                    <div class="stat-icon">⏰</div>
+                    <div class="stat-number">48</div>
+                    <div class="stat-label">Hours</div>
+                    <div class="stat-description">Epic building time limit</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Project Showcase Section -->
     <section id="showcase" class="showcase-section">
-        <h2 class="section-title">Project Showcase</h2>
-        <p class="section-subtitle">Inspiring projects from past sprints</p>
-        <div class="showcase-container">
-            <div class="showcase-card">
-                <div class="showcase-image">🤖</div>
-                <h3>Student AI Assistant</h3>
-                <p>An intelligent chatbot powered by AI that helps students with their learning journey, providing
-                    instant answers and personalized guidance.</p>
-                <a href="#" class="btn btn-secondary">View Project</a>
+        <div class="section-container">
+            <h2 class="section-title">Winning Projects</h2>
+            <p class="section-subtitle">Inspiring projects from past sprints that made an impact</p>
+            <div class="showcase-container">
+                <div class="showcase-card">
+                    <div class="showcase-image">🤖</div>
+                    <div class="showcase-badge">Award Winner</div>
+                    <h3>Student AI Assistant</h3>
+                    <p>An intelligent chatbot powered by AI that helps students learn. Uses NLP to provide personalized
+                        guidance.</p>
+                    <div class="showcase-meta">
+                        <span>🏆 Best AI Project</span>
+                        <span>⭐ 4.8/5</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">View Project →</a>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-image">🎯</div>
+                    <div class="showcase-badge">Popular</div>
+                    <h3>Mini CTF Challenge</h3>
+                    <p>An interactive capture-the-flag platform for cybersecurity learning. Perfect for beginners to
+                        advance.</p>
+                    <div class="showcase-meta">
+                        <span>🔒 Security</span>
+                        <span>⭐ 4.7/5</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">View Project →</a>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-image">⏱️</div>
+                    <div class="showcase-badge">Innovation</div>
+                    <h3>Sprint Companion App</h3>
+                    <p>A real-time collaboration app that helps teams communicate and track progress during the sprint.
+                    </p>
+                    <div class="showcase-meta">
+                        <span>📱 Mobile</span>
+                        <span>⭐ 4.9/5</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">View Project →</a>
+                </div>
+                <div class="showcase-card">
+                    <div class="showcase-image">📖</div>
+                    <div class="showcase-badge">Community</div>
+                    <h3>Open Source Starter Kit</h3>
+                    <p>A comprehensive guide and toolkit for developers to start their open source journey and
+                        contribute.</p>
+                    <div class="showcase-meta">
+                        <span>💻 Open Source</span>
+                        <span>⭐ 4.6/5</span>
+                    </div>
+                    <a href="#" class="btn btn-secondary">View Project →</a>
+                </div>
             </div>
-            <div class="showcase-card">
-                <div class="showcase-image">🎯</div>
-                <h3>Mini CTF Challenge</h3>
-                <p>A capture-the-flag platform designed for beginners to learn cybersecurity concepts through fun,
-                    interactive challenges.</p>
-                <a href="#" class="btn btn-secondary">View Project</a>
-            </div>
-            <div class="showcase-card">
-                <div class="showcase-image">⏱️</div>
-                <h3>Sprint Companion App</h3>
-                <p>A cross-platform mobile app that helps teams collaborate during the sprint with real-time updates and
-                    progress tracking.</p>
-                <a href="#" class="btn btn-secondary">View Project</a>
-            </div>
-            <div class="showcase-card">
-                <div class="showcase-image">📖</div>
-                <h3>Open Source Starter Kit</h3>
-                <p>A comprehensive guide and toolkit to help beginners start their open source contributions and make an
-                    impact.</p>
-                <a href="#" class="btn btn-secondary">View Project</a>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="section-container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about the sprint</p>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the BlackPanda Labs Sprint?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>The BlackPanda Labs Sprint is a 48-hour intensive building event where developers, designers,
+                            and creators collaborate to build innovative projects. You can choose from 6 different
+                            tracks and work solo or as a team.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Who can participate?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Anyone with passion for building can participate! Whether you're a beginner or an experienced
+                            developer, there's a track and challenge for you. We welcome students, professionals, and
+                            enthusiasts from all skill levels.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I form a team?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can register solo or with a team of up to 5 members. Use the registration form to create
+                            or join a team. Teams are finalized 48 hours before the sprint begins, so get your group
+                            together early!</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What resources are provided?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide starter kits, API documentation, design templates, and access to mentor support
+                            throughout the sprint. All resources are shared in our Discord community and documentation
+                            portal.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How are winners decided?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Winners are judged based on innovation, functionality, design, and presentation. Each track
+                            has its own judges and winners. All submissions are evaluated fairly by industry experts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are the prizes?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Top projects in each track receive cash prizes, exclusive merchandise, mentorship
+                            opportunities, and potential internship offers from partner companies. Every participant
+                            also gets a certificate of participation.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <h2 class="section-title">Get in Touch</h2>
-        <p class="section-subtitle">Connect with us on social media</p>
-        <div class="contact-container">
-            <div class="contact-item">
-                <span class="contact-icon">📧</span>
-                <h3>Email</h3>
-                <p><a href="mailto:hello@blackpandalabs.com">hello@blackpandalabs.com</a></p>
+        <div class="section-container">
+            <h2 class="section-title">Get Connected</h2>
+            <p class="section-subtitle">Join our community and stay updated</p>
+            <div class="contact-container">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <h3>Email Us</h3>
+                    <p>Have questions? Reach out to our team</p>
+                    <a href="mailto:hello@blackpandalabs.com" class="contact-link">hello@blackpandalabs.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🐙</span>
+                    <h3>GitHub</h3>
+                    <p>Check out our repositories and resources</p>
+                    <a href="https://github.com/blackpandalabs" target="_blank" class="contact-link">Visit GitHub →</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">💬</span>
+                    <h3>Discord Community</h3>
+                    <p>Join our growing community of builders</p>
+                    <a href="#" target="_blank" class="contact-link">Join Discord →</a>
+                </div>
             </div>
-            <div class="contact-item">
-                <span class="contact-icon">🐙</span>
-                <h3>GitHub</h3>
-                <p><a href="https://github.com" target="_blank">BlackPanda Labs GitHub</a></p>
-            </div>
-            <div class="contact-item">
-                <span class="contact-icon">💼</span>
-                <h3>LinkedIn</h3>
-                <p><a href="https://linkedin.com" target="_blank">BlackPanda Labs LinkedIn</a></p>
+            <div class="newsletter-section">
+                <h3>Subscribe to Our Newsletter</h3>
+                <p>Get sprint updates, tips, and exclusive content</p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" class="newsletter-input">
+                    <button class="btn btn-primary">Subscribe</button>
+                </div>
             </div>
         </div>
     </section>
@@ -222,33 +377,34 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>&copy; 2026 BlackPanda Labs Sprint Command Center. All rights reserved.</p>
-            <div class="footer-links">
+            <div class="footer-section">
+                <h4>BlackPanda Labs</h4>
+                <p>Empowering builders and innovators worldwide.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
                 <a href="#home">Home</a>
                 <a href="#tracks">Tracks</a>
                 <a href="#progress">Progress</a>
                 <a href="#showcase">Showcase</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contact">Contact</a>
             </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" class="social-icon">🐙</a>
+                    <a href="#" class="social-icon">🐦</a>
+                    <a href="#" class="social-icon">💼</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BlackPanda Labs. All rights reserved. | Built with ❤️ for builders</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
-
-</html>
-</ul>
-
-<hr>
-
-<h2>Project Showcase</h2>
-
-<ul>
-    <li>Student AI Assistant</li>
-    <li>Mini CTF Challenge</li>
-    <li>Sprint Companion App</li>
-</ul>
-
 </body>
 
 </html>
