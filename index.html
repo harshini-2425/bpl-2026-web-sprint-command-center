@@ -1,23 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>BlackPanda Sprint Command Center</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlackPanda Labs Sprint Command Center</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🐼</span>
+                <span class="logo-text">BlackPanda Labs</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#tracks" class="nav-link">Tracks</a></li>
+                <li class="nav-item"><a href="#progress" class="nav-link">Progress</a></li>
+                <li class="nav-item"><a href="#showcase" class="nav-link">Showcase</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                <li class="nav-item">
+                    <button class="dark-mode-toggle" id="darkModeToggle" title="Toggle dark mode">
+                        🌙
+                    </button>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <h1>BlackPanda Labs Sprint Command Center</h1>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">BlackPanda Labs Sprint Command Center</h1>
+            <p class="hero-subtitle">Your gateway to an epic 48-hour build sprint. Track challenges, monitor progress,
+                and showcase your innovations.</p>
+            <button class="btn btn-primary" id="getStartedBtn">Get Started</button>
+        </div>
+    </section>
 
-    <h2>Welcome!</h2>
+    <!-- Countdown Timer -->
+    <section class="countdown-section">
+        <h2>Sprint Countdown</h2>
+        <div class="countdown">
+            <div class="countdown-item">
+                <span class="countdown-value" id="days">00</span>
+                <span class="countdown-label">Days</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="hours">00</span>
+                <span class="countdown-label">Hours</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="minutes">00</span>
+                <span class="countdown-label">Minutes</span>
+            </div>
+            <div class="countdown-item">
+                <span class="countdown-value" id="seconds">00</span>
+                <span class="countdown-label">Seconds</span>
+            </div>
+        </div>
+    </section>
 
-    <p>
-        This website helps participants view challenges,
-        track progress, and showcase projects.
-    </p>
+    <!-- Build Tracks Section -->
+    <section id="tracks" class="tracks-section">
+        <h2 class="section-title">Build Tracks</h2>
+        <p class="section-subtitle">Choose your challenge and showcase your skills</p>
+        <div class="tracks-container">
+            <div class="track-card">
+                <div class="track-icon">💻</div>
+                <h3>Web Development</h3>
+                <p>Build interactive web applications using HTML, CSS, and JavaScript. Create responsive and modern web
+                    experiences.</p>
+            </div>
+            <div class="track-card">
+                <div class="track-icon">🤖</div>
+                <h3>AI/ML</h3>
+                <p>Explore artificial intelligence and machine learning. Build models and solve real-world problems with
+                    AI.</p>
+            </div>
+            <div class="track-card">
+                <div class="track-icon">🔒</div>
+                <h3>Cybersecurity</h3>
+                <p>Protect the digital world. Learn security concepts and build secure applications and challenges.</p>
+            </div>
+            <div class="track-card">
+                <div class="track-icon">🎨</div>
+                <h3>UI/UX</h3>
+                <p>Design beautiful user interfaces and experiences. Focus on aesthetics and usability.</p>
+            </div>
+            <div class="track-card">
+                <div class="track-icon">📱</div>
+                <h3>App Development</h3>
+                <p>Create mobile and cross-platform applications. Build apps that work seamlessly on all devices.</p>
+            </div>
+            <div class="track-card">
+                <div class="track-icon">📚</div>
+                <h3>Documentation/Open Source</h3>
+                <p>Contribute to open source projects and create comprehensive documentation for the community.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Tracker Section -->
+    <section id="progress" class="progress-section">
+        <h2 class="section-title">Progress Tracker</h2>
+        <p class="section-subtitle">Track your sprint milestones</p>
+        <div class="progress-container">
+            <div class="progress-card completed">
+                <div class="progress-icon">✅</div>
+                <h3>Repository Created</h3>
+                <p>Your project repository is ready and initialized.</p>
+            </div>
+            <div class="progress-card completed">
+                <div class="progress-icon">✅</div>
+                <h3>Website Started</h3>
+                <p>Foundation and basic structure are in place.</p>
+            </div>
+            <div class="progress-card in-progress">
+                <div class="progress-icon">🔄</div>
+                <h3>Project In Progress</h3>
+                <p>Development is actively underway. Keep pushing forward!</p>
+            </div>
+            <div class="progress-card pending">
+                <div class="progress-icon">⌛</div>
+                <h3>Final Submission</h3>
+                <p>Prepare your project for final submission and evaluation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <h2 class="section-title">Sprint Statistics</h2>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-number">250+</div>
+                <div class="stat-label">Participants</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Tracks</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">∞</div>
+                <div class="stat-label">Projects</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">48</div>
+                <div class="stat-label">Hours</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase Section -->
+    <section id="showcase" class="showcase-section">
+        <h2 class="section-title">Project Showcase</h2>
+        <p class="section-subtitle">Inspiring projects from past sprints</p>
+        <div class="showcase-container">
+            <div class="showcase-card">
+                <div class="showcase-image">🤖</div>
+                <h3>Student AI Assistant</h3>
+                <p>An intelligent chatbot powered by AI that helps students with their learning journey, providing
+                    instant answers and personalized guidance.</p>
+                <a href="#" class="btn btn-secondary">View Project</a>
+            </div>
+            <div class="showcase-card">
+                <div class="showcase-image">🎯</div>
+                <h3>Mini CTF Challenge</h3>
+                <p>A capture-the-flag platform designed for beginners to learn cybersecurity concepts through fun,
+                    interactive challenges.</p>
+                <a href="#" class="btn btn-secondary">View Project</a>
+            </div>
+            <div class="showcase-card">
+                <div class="showcase-image">⏱️</div>
+                <h3>Sprint Companion App</h3>
+                <p>A cross-platform mobile app that helps teams collaborate during the sprint with real-time updates and
+                    progress tracking.</p>
+                <a href="#" class="btn btn-secondary">View Project</a>
+            </div>
+            <div class="showcase-card">
+                <div class="showcase-image">📖</div>
+                <h3>Open Source Starter Kit</h3>
+                <p>A comprehensive guide and toolkit to help beginners start their open source contributions and make an
+                    impact.</p>
+                <a href="#" class="btn btn-secondary">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-subtitle">Connect with us on social media</p>
+        <div class="contact-container">
+            <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <h3>Email</h3>
+                <p><a href="mailto:hello@blackpandalabs.com">hello@blackpandalabs.com</a></p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">🐙</span>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com" target="_blank">BlackPanda Labs GitHub</a></p>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">💼</span>
+                <h3>LinkedIn</h3>
+                <p><a href="https://linkedin.com" target="_blank">BlackPanda Labs LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 BlackPanda Labs Sprint Command Center. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#tracks">Tracks</a>
+                <a href="#progress">Progress</a>
+                <a href="#showcase">Showcase</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
+</body>
+
+</html>
+</ul>
+
+<hr>
+
+<h2>Project Showcase</h2>
+
+<ul>
+    <li>Student AI Assistant</li>
+    <li>Mini CTF Challenge</li>
+    <li>Sprint Companion App</li>
+</ul>
 
 </body>
 
