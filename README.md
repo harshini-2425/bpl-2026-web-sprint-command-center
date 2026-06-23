@@ -53,34 +53,6 @@ Built with vanilla HTML5, CSS3, and JavaScript—**no frameworks, no dependencie
 
 ---
 
-## 📸 Screenshots
-
-### Hero Section with Typing Animation
-![Hero Section](https://via.placeholder.com/1200x400?text=Hero+Section+with+Typing+Animation)
-
-### Sprint Information & Countdown
-![Sprint Info](https://via.placeholder.com/1200x400?text=Live+Countdown+Timer)
-
-### Build Tracks Overview
-![Build Tracks](https://via.placeholder.com/1200x400?text=Build+Tracks+Section)
-
-### Team Leaderboard
-![Leaderboard](https://via.placeholder.com/1200x400?text=Team+Leaderboard+Section)
-
-### Project Showcase
-![Showcase](https://via.placeholder.com/1200x400?text=Project+Showcase)
-
-### Statistics Dashboard
-![Stats](https://via.placeholder.com/1200x400?text=Statistics+Dashboard)
-
-### Announcements & Testimonials
-![Announcements](https://via.placeholder.com/1200x400?text=Announcements+&+Testimonials)
-
-### Dark Mode
-![Dark Mode](https://via.placeholder.com/1200x400?text=Dark+Mode+Toggle)
-
----
-
 ## 🛠️ Technologies Used
 
 ### Frontend Stack
@@ -232,7 +204,7 @@ const countdownEndDate = new Date('2026-06-24 11:59:59').getTime();
 ## 🌐 Live Demo
 
 ### Hosted Versions
-- **GitHub Pages:** [https://yourusername.github.io/bpl-2026-web-sprint-command-center](https://yourusername.github.io/bpl-2026-web-sprint-command-center)
+- **GitHub Pages:** [https://bpl-2026-web-sprint-command-center.vercel.app/](https://bpl-2026-web-sprint-command-center.vercel.app/)
 - **Local:** Open `index.html` in your browser
 
 ### Browser Compatibility
@@ -351,10 +323,9 @@ You must:
 BlackPanda Labs 2026 Sprint Participant
 
 ### Connect With Me
-- 🐙 [GitHub Profile](https://github.com/yourusername)
-- 💼 [LinkedIn](https://linkedin.com/in/yourprofile)
-- 🌐 [Portfolio Website](https://yourportfolio.com)
-- 📧 [Email](mailto:your.email@example.com)
+- 🐙 [GitHub Profile](https://github.com/harshini-2425)
+- 💼 [LinkedIn](https://www.linkedin.com/in/elchuri-t-a5467a343/)
+- 📧 [Email](mailto:elchuritejaharshini@gmail.com)
 
 ---
 
@@ -396,8 +367,8 @@ Contributions are welcome! To contribute:
 ## 📞 Support
 
 Found a bug or have a suggestion? 
-- 🐛 [Open an Issue](https://github.com/yourusername/bpl-2026-web-sprint-command-center/issues)
-- 💬 [Start a Discussion](https://github.com/yourusername/bpl-2026-web-sprint-command-center/discussions)
+- 🐛 [Open an Issue](https://github.com/harshini-2425/bpl-2026-web-sprint-command-center/issues)
+- 💬 [Start a Discussion](https://github.com/harshini-2425/bpl-2026-web-sprint-command-center/discussions)
 
 ---
 
