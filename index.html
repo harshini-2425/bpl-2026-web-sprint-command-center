@@ -10,6 +10,21 @@
 </head>
 
 <body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-container">
+            <div class="loading-logo">🐼</div>
+            <div class="loading-text">BlackPanda Labs</div>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+            <p class="loading-subtitle">Preparing your command center...</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgressBar" class="scroll-progress-bar"></div>
+
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
@@ -42,7 +57,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <div class="hero-badge">🚀 Welcome to the Sprint</div>
-            <h1 class="hero-title">Sprint Command Center</h1>
+            <h1 class="hero-title" id="typingTitle">Sprint Command Center</h1>
             <p class="hero-subtitle">Join 250+ developers in an epic 48-hour build sprint. Create innovative projects,
                 win challenges, and change the game.</p>
             <div class="hero-buttons">
@@ -199,7 +214,157 @@
         </div>
     </section>
 
-    <!-- Project Showcase Section -->
+    <!-- Team Leaderboard Section -->
+    <section class="leaderboard-section">
+        <div class="section-container">
+            <h2 class="section-title">🏆 Team Leaderboard</h2>
+            <p class="section-subtitle">Top performing teams in this sprint</p>
+            <div class="leaderboard-container">
+                <div class="leaderboard-card rank-1">
+                    <div class="rank-badge">🥇</div>
+                    <div class="leaderboard-info">
+                        <h3>CodeMasters United</h3>
+                        <p class="team-members">5 members • Web Development</p>
+                    </div>
+                    <div class="team-score">
+                        <span class="score-label">Score</span>
+                        <span class="score-value">9,850</span>
+                    </div>
+                </div>
+                <div class="leaderboard-card rank-2">
+                    <div class="rank-badge">🥈</div>
+                    <div class="leaderboard-info">
+                        <h3>AI Innovators</h3>
+                        <p class="team-members">4 members • AI/ML</p>
+                    </div>
+                    <div class="team-score">
+                        <span class="score-label">Score</span>
+                        <span class="score-value">9,620</span>
+                    </div>
+                </div>
+                <div class="leaderboard-card rank-3">
+                    <div class="rank-badge">🥉</div>
+                    <div class="leaderboard-info">
+                        <h3>SecureShield Crew</h3>
+                        <p class="team-members">3 members • Cybersecurity</p>
+                    </div>
+                    <div class="team-score">
+                        <span class="score-label">Score</span>
+                        <span class="score-value">9,340</span>
+                    </div>
+                </div>
+                <div class="leaderboard-card rank-4">
+                    <div class="rank-badge">4</div>
+                    <div class="leaderboard-info">
+                        <h3>Design Wizards</h3>
+                        <p class="team-members">4 members • UI/UX Design</p>
+                    </div>
+                    <div class="team-score">
+                        <span class="score-label">Score</span>
+                        <span class="score-value">9,150</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Announcements Section -->
+    <section class="announcements-section">
+        <div class="section-container">
+            <h2 class="section-title">📢 Recent Announcements</h2>
+            <p class="section-subtitle">Stay updated with the latest sprint news</p>
+            <div class="announcements-container">
+                <div class="announcement-card">
+                    <div class="announcement-tag">📌 Important</div>
+                    <h3>Midpoint Check-in Reminder</h3>
+                    <p>Don't forget to submit your project progress by midnight tonight. All teams must have at least
+                        40% of their features completed.</p>
+                    <div class="announcement-meta">2 hours ago</div>
+                </div>
+                <div class="announcement-card">
+                    <div class="announcement-tag">🎉 Milestone</div>
+                    <h3>Halfway Through the Sprint!</h3>
+                    <p>Congratulations! We've reached the 24-hour mark. Keep the momentum going! Refreshments available
+                        in the main hall.</p>
+                    <div class="announcement-meta">6 hours ago</div>
+                </div>
+                <div class="announcement-card">
+                    <div class="announcement-tag">🔧 Support</div>
+                    <h3>New API Endpoints Available</h3>
+                    <p>Three new API endpoints have been added to support AI/ML track projects. Check the documentation
+                        in your dashboard.</p>
+                    <div class="announcement-meta">12 hours ago</div>
+                </div>
+                <div class="announcement-card">
+                    <div class="announcement-tag">🏅 Achievement</div>
+                    <h3>First Repository Milestone!</h3>
+                    <p>Over 200 repositories have been created! Average code commits per team: 42. Great work, everyone!
+                    </p>
+                    <div class="announcement-meta">18 hours ago</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-container">
+            <h2 class="section-title">⭐ Testimonials</h2>
+            <p class="section-subtitle">What developers are saying about the sprint</p>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"This sprint was absolutely incredible! The 48-hour challenge pushed me
+                        to learn new technologies and collaborate with amazing developers. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍💻</div>
+                        <div class="author-info">
+                            <h4>Alex Chen</h4>
+                            <p>Full Stack Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Best sprint I've participated in! The mentorship support was
+                        outstanding, and the community spirit was infectious. Can't wait for the next one!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍🎨</div>
+                        <div class="author-info">
+                            <h4>Sarah Williams</h4>
+                            <p>UI/UX Designer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"My team shipped a project we're genuinely proud of. The 48-hour
+                        constraint forced us to focus on what really matters. Fantastic experience!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👨‍💼</div>
+                        <div class="author-info">
+                            <h4>Marcus Johnson</h4>
+                            <p>Team Lead</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"I came in nervous about my skills, but the supportive environment
+                        helped me grow so much. Built my first AI project and got feedback from industry experts!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">👩‍🚀</div>
+                        <div class="author-info">
+                            <h4>Emma Davis</h4>
+                            <p>Junior Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="showcase" class="showcase-section">
         <div class="section-container">
             <h2 class="section-title">Winning Projects</h2>
@@ -403,6 +568,11 @@
             <p>&copy; 2026 BlackPanda Labs. All rights reserved. | Built with ❤️ for builders</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTopBtn" class="back-to-top-btn" title="Back to top">
+        <span>⬆️</span>
+    </button>
 
     <script src="script.js"></script>
 </body>

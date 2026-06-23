@@ -1,3 +1,25 @@
+/* ==================== Loading Screen Fadeout ==================== */
+// Hide loading screen after 2 seconds
+window.addEventListener('load', () => {
+    const loadingScreen = document.getElementById('loadingScreen');
+    if (loadingScreen) {
+        // Loading screen will fade out automatically due to CSS animation
+        setTimeout(() => {
+            loadingScreen.remove();
+        }, 2400); // Match CSS animation duration
+    }
+});
+
+/* ==================== Scroll Progress Bar ==================== */
+const scrollProgressBar = document.getElementById('scrollProgressBar');
+
+window.addEventListener('scroll', () => {
+    // Calculate scroll percentage
+    const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = (window.pageYOffset / windowHeight) * 100;
+    scrollProgressBar.style.width = scrolled + '%';
+});
+
 /* ==================== Dark Mode Toggle ==================== */
 const darkModeToggle = document.getElementById('darkModeToggle');
 
@@ -41,6 +63,55 @@ document.addEventListener('scroll', () => {
     }
 });
 
+/* ==================== Active Navigation Link Highlighting ==================== */
+function updateActiveNavLink() {
+    const sections = document.querySelectorAll('section[id]');
+    const scrollPosition = window.pageYOffset + 100;
+
+    // Remove active class from all links
+    navLinks.forEach(link => link.classList.remove('active'));
+
+    // Add active class to the current section's link
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const sectionId = section.getAttribute('id');
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            const navLink = document.querySelector(`a[href="#${sectionId}"]`);
+            if (navLink) {
+                navLink.classList.add('active');
+            }
+        }
+    });
+}
+
+window.addEventListener('scroll', updateActiveNavLink);
+document.addEventListener('DOMContentLoaded', updateActiveNavLink);
+
+/* ==================== Typing Animation for Hero Title ==================== */
+const typingTitle = document.getElementById('typingTitle');
+const textToType = 'Sprint Command Center';
+let charIndex = 0;
+
+function typeTitle() {
+    if (charIndex < textToType.length) {
+        typingTitle.textContent = textToType.substring(0, charIndex + 1);
+        typingTitle.classList.add('typing');
+        charIndex++;
+        setTimeout(typeTitle, 100);
+    } else {
+        typingTitle.classList.remove('typing');
+    }
+}
+
+// Start typing animation after page loads
+document.addEventListener('DOMContentLoaded', () => {
+    typingTitle.textContent = '';
+    charIndex = 0;
+    typeTitle();
+});
+
 /* ==================== Countdown Timer ==================== */
 function updateCountdown() {
     // Get current time
@@ -61,17 +132,22 @@ function updateCountdown() {
     const seconds = Math.floor((countDown % (1000 * 60)) / 1000);
 
     // Update HTML with padded numbers
-    document.getElementById('days').textContent = String(days).padStart(2, '0');
-    document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-    document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-    document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+
+    if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+    if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+    if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+    if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
 
     // If countdown is finished
     if (countDown < 0) {
-        document.getElementById('days').textContent = '00';
-        document.getElementById('hours').textContent = '00';
-        document.getElementById('minutes').textContent = '00';
-        document.getElementById('seconds').textContent = '00';
+        if (daysEl) daysEl.textContent = '00';
+        if (hoursEl) hoursEl.textContent = '00';
+        if (minutesEl) minutesEl.textContent = '00';
+        if (secondsEl) secondsEl.textContent = '00';
     }
 }
 
@@ -130,6 +206,24 @@ if (learnMoreBtn) {
     });
 }
 
+/* ==================== Back to Top Button ==================== */
+const backToTopBtn = document.getElementById('backToTopBtn');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});
+
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 /* ==================== Scroll Animations with Intersection Observer ==================== */
 const observerOptions = {
     threshold: 0.1,
@@ -146,14 +240,17 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements
+// Observe elements for fade-in animation
 const elementsToObserve = [
     '.track-card',
     '.progress-card',
     '.stat-card',
     '.showcase-card',
     '.contact-item',
-    '.faq-item'
+    '.faq-item',
+    '.leaderboard-card',
+    '.announcement-card',
+    '.testimonial-card'
 ];
 
 elementsToObserve.forEach(selector => {
@@ -163,7 +260,7 @@ elementsToObserve.forEach(selector => {
     });
 });
 
-/* ==================== Stat Counter Animation ==================== */
+/* ==================== Animated Stat Counter ==================== */
 function animateStatNumbers() {
     const statNumbers = document.querySelectorAll('.stat-number');
 
@@ -266,13 +363,36 @@ navMenu.addEventListener('click', (e) => {
     }
 });
 
+/* ==================== Enhanced Hover Effects ==================== */
+// Add subtle interaction feedback
+document.querySelectorAll('.btn, .card, .nav-link').forEach(element => {
+    element.addEventListener('mousedown', function() {
+        this.style.transform = 'scale(0.98)';
+    });
+    
+    element.addEventListener('mouseup', function() {
+        this.style.transform = '';
+    });
+});
+
 /* ==================== Console Welcome Message ==================== */
 console.log('%c🐼 Welcome to BlackPanda Labs Sprint Command Center!',
     'font-size: 18px; font-weight: bold; color: #0077ff; text-shadow: 0 0 10px rgba(0,119,255,0.5);');
 console.log('%cLet\'s build something amazing in the next 48 hours! 🚀',
     'font-size: 14px; color: #00d4ff; font-weight: 500;');
+console.log('%cVersion: 2.0 Enhanced',
+    'font-size: 12px; color: #4caf50; font-weight: 500;');
+
+/* ==================== Page Performance Check ==================== */
+window.addEventListener('load', () => {
+    // Log page load time
+    const perfData = window.performance.timing;
+    const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
+    console.log(`✓ Page loaded in ${pageLoadTime}ms`);
+});
 
 /* ==================== Page Load Complete ==================== */
 document.addEventListener('DOMContentLoaded', () => {
     console.log('✓ Page initialized successfully!');
+    console.log('✓ All features loaded: Animations, Dark Mode, Interactions');
 });
